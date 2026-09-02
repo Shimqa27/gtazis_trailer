@@ -1,10 +1,10 @@
 (function loadSectionBackgrounds(){
     document.querySelectorAll('[data-bg]').forEach((section) => {
         const n = section.getAttribute('data-bg');
-        section.style.setProperty('--section-bg', `url("../assets/images/back${n}.png")`);
+        // Используем абсолютный путь от корня сайта
+        section.style.setProperty('--section-bg', `url("/gtazis_trailer/assets/images/back${n}.png")`);
     });
 })();
-
 function initAnimations() {
     if (!window.gsap || !window.ScrollTrigger) return;
     

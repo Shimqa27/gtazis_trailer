@@ -1629,3 +1629,462 @@ button {
         scroll-behavior: auto !important;
     }
 }
+
+/* =========================================================
+   MOBILE ADAPTIVE PATCH — ONLY RESPONSIVE OVERRIDES
+   Основные стили выше не изменяются.
+   ========================================================= */
+
+/* Планшеты / небольшие экраны */
+@media (max-width: 900px) {
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .wrap,
+    .hero-inner,
+    .section-content {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .signal > *,
+    .discord-grid > *,
+    .post-grid > *,
+    .steps > *,
+    .final > *,
+    .theory > * {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .section-heading,
+    .posts-head h2,
+    .theory-core h2,
+    .discord h2,
+    .roadmap-head h2,
+    .final h2,
+    .post h3,
+    .signal-card b,
+    .compare-layer b,
+    .step h3 {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    .hero-copy,
+    .section-intro,
+    .posts-head p,
+    .theory-core p,
+    .discord-copy,
+    .roadmap-head p,
+    .final p,
+    .post p,
+    .signal-card p,
+    .compare-layer p,
+    .step p {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .signal,
+    .discord-grid,
+    .post-grid {
+        width: 100%;
+    }
+
+    .post {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .compare-slider {
+        width: 100%;
+        max-width: 100%;
+        touch-action: pan-y;
+    }
+
+    .compare-layer {
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .compare-layer p {
+        width: 100%;
+    }
+}
+
+/* Телефоны */
+@media (max-width: 600px) {
+    .wrap {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* Безопасные отступы с учётом вырезов/динамического островка */
+    .nav {
+        padding-left: max(16px, env(safe-area-inset-left));
+        padding-right: max(16px, env(safe-area-inset-right));
+        padding-top: max(14px, env(safe-area-inset-top));
+    }
+
+    .hero {
+        padding-left: max(16px, env(safe-area-inset-left));
+        padding-right: max(16px, env(safe-area-inset-right));
+        padding-top: max(92px, calc(env(safe-area-inset-top) + 72px));
+        padding-bottom: 64px;
+    }
+
+    .hero-inner {
+        min-width: 0;
+    }
+
+    .hero-kicker {
+        max-width: 100%;
+        text-align: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        line-height: 1.25;
+    }
+
+    .hero-title {
+        width: 100%;
+        max-width: 100%;
+        font-size: clamp(3.7rem, 21vw, 7rem);
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .hero-copy {
+        padding: 0;
+        line-height: 1.55;
+    }
+
+    .hero-scroll {
+        bottom: max(14px, env(safe-area-inset-bottom));
+    }
+
+    /* Все секции получают одинаковый комфортный горизонтальный ритм */
+    .diag-section {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
+    .posts {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
+    .roadmap {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
+    .final {
+        padding-left: max(16px, env(safe-area-inset-left));
+        padding-right: max(16px, env(safe-area-inset-right));
+        padding-top: 72px;
+        padding-bottom: max(72px, calc(env(safe-area-inset-bottom) + 48px));
+    }
+
+    .section-label {
+        line-height: 1.4;
+    }
+
+    .section-heading,
+    .posts-head h2,
+    .theory-core h2,
+    .discord h2,
+    .roadmap-head h2,
+    .final h2 {
+        width: 100%;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        hyphens: none;
+    }
+
+    /* Не даём заголовкам упираться в края */
+    .section-heading {
+        font-size: clamp(2.6rem, 12vw, 4.8rem);
+    }
+
+    .posts-head h2 {
+        font-size: clamp(2.8rem, 13vw, 5rem);
+    }
+
+    .theory-core h2,
+    .discord h2,
+    .roadmap-head h2 {
+        font-size: clamp(3rem, 14vw, 5.5rem);
+    }
+
+    .final h2 {
+        font-size: clamp(3.8rem, 17vw, 7rem);
+    }
+
+    /* Карточки — без горизонтального переполнения */
+    .signal {
+        gap: 32px;
+    }
+
+    .signal-stack {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .signal-card {
+        width: 100%;
+        min-width: 0;
+        padding: 18px;
+    }
+
+    .signal-card b {
+        display: block;
+        line-height: 1;
+        font-size: clamp(1.2rem, 6vw, 1.7rem);
+    }
+
+    .posts-head {
+        margin-bottom: 30px;
+    }
+
+    .post-grid {
+        gap: 16px;
+    }
+
+    .post {
+        min-height: 290px;
+        padding: 18px;
+    }
+
+    .post h3 {
+        font-size: clamp(1.6rem, 8vw, 2.3rem);
+        line-height: .95;
+    }
+
+    .post p {
+        line-height: 1.5;
+    }
+
+    /* Theory */
+    .theory {
+        min-height: 72vh;
+        padding: 56px 0;
+    }
+
+    .theory-ring {
+        width: min(86vw, 420px);
+        max-width: calc(100vw - 32px);
+    }
+
+    .theory-core {
+        width: 100%;
+        padding: 0 4px;
+    }
+
+    .theory-core p {
+        padding: 0;
+        line-height: 1.55;
+    }
+
+    .pulse-line {
+        width: min(72vw, 360px);
+    }
+
+    /* Discord */
+    .discord {
+        padding: 56px 0;
+    }
+
+    .discord-grid {
+        gap: 28px;
+    }
+
+    .fake-discord {
+        width: 100%;
+        min-width: 0;
+        padding: 16px;
+    }
+
+    .server-head {
+        min-width: 0;
+    }
+
+    .server-name {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .server-list span {
+        display: block;
+        line-height: 1.45;
+        overflow-wrap: anywhere;
+    }
+
+    /* Compare */
+    .compare-slider {
+        min-height: 230px;
+        margin-top: 16px;
+    }
+
+    .compare-layer {
+        padding: 18px;
+        justify-content: center;
+    }
+
+    .compare-layer b {
+        font-size: clamp(1.05rem, 5vw, 1.35rem);
+        line-height: 1;
+    }
+
+    .compare-layer p {
+        font-size: .78rem;
+        line-height: 1.45;
+    }
+
+    .compare-handle::before {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* Roadmap */
+    .roadmap-head {
+        margin-bottom: 44px;
+    }
+
+    .steps {
+        gap: 34px;
+    }
+
+    .step {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .step h3 {
+        line-height: 1;
+    }
+
+    .step p {
+        line-height: 1.5;
+    }
+
+    /* Кнопки всегда помещаются в ширину */
+    .final-actions {
+        width: 100%;
+        padding: 0 4px;
+    }
+
+    .btn {
+        width: 100%;
+        min-width: 0;
+        max-width: 360px;
+        min-height: 48px;
+        padding: 14px 16px;
+        gap: 12px;
+    }
+
+    /* Бегущие строки */
+    .ticker,
+    .footer-marquee {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .ticker-track,
+    .footer-track {
+        max-width: none;
+    }
+
+    /* Footer */
+    .footer {
+        padding-left: max(0px, env(safe-area-inset-left));
+        padding-right: max(0px, env(safe-area-inset-right));
+    }
+
+    .footer-bottom {
+        padding-left: 4px;
+        padding-right: 4px;
+        line-height: 1.5;
+    }
+
+    /* Убираем потенциальные причины горизонтального скролла */
+    img,
+    svg,
+    video,
+    canvas,
+    iframe {
+        max-width: 100%;
+    }
+}
+
+/* Очень узкие телефоны */
+@media (max-width: 380px) {
+    .wrap {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .hero {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .hero-title {
+        font-size: clamp(3.25rem, 20vw, 5rem);
+    }
+
+    .hero-kicker {
+        font-size: .55rem;
+        padding: 6px 10px;
+    }
+
+    .section-heading {
+        font-size: clamp(2.35rem, 11.5vw, 4rem);
+    }
+
+    .posts-head h2 {
+        font-size: clamp(2.55rem, 12vw, 4.5rem);
+    }
+
+    .theory-core h2,
+    .discord h2,
+    .roadmap-head h2 {
+        font-size: clamp(2.8rem, 13vw, 5rem);
+    }
+
+    .final h2 {
+        font-size: clamp(3.4rem, 16vw, 6rem);
+    }
+
+    .post {
+        min-height: 240px;
+        padding: 15px;
+    }
+
+    .signal-card {
+        padding: 15px;
+    }
+
+    .fake-discord {
+        padding: 14px;
+    }
+
+    .compare-slider {
+        min-height: 210px;
+    }
+
+    .compare-layer {
+        padding: 15px;
+    }
+
+    .btn {
+        max-width: 100%;
+        font-size: .68rem;
+    }
+}

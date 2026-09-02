@@ -1127,3 +1127,505 @@ button {
     text-transform: uppercase;
     letter-spacing: .08em;
 }
+/* ============================================
+   АДАПТИВНАЯ ВЕРСТКА — GTAZIS
+   ============================================ */
+
+/* ===== ДИАГОНАЛЬНЫЕ СЕКЦИИ (перекрытие) ===== */
+@media (min-width: 901px) {
+    .diag-section + .diag-section {
+        margin-top: -55px;
+    }
+    .posts {
+        margin-top: -35px;
+    }
+    .theory {
+        margin-top: -30px;
+    }
+    .discord {
+        margin-top: -25px;
+    }
+    .roadmap {
+        margin-top: -25px;
+    }
+}
+
+/* ===== ПЛАНШЕТЫ И МАЛЕНЬКИЕ НОУТБУКИ ===== */
+@media (max-width: 900px) {
+    /* Отключаем диагональное перекрытие */
+    .diag-section + .diag-section {
+        margin-top: 0;
+    }
+    .posts,
+    .theory,
+    .discord,
+    .roadmap {
+        margin-top: 0;
+    }
+
+    /* Signal — в колонку */
+    .signal {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        gap: 50px;
+    }
+
+    .signal-copy {
+        max-width: 100%;
+    }
+
+    .section-intro {
+        max-width: 100%;
+    }
+
+    /* Discord — в колонку */
+    .discord-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        align-items: start;
+    }
+
+    .discord-copy {
+        max-width: 100%;
+    }
+
+    /* Посты — в колонку */
+    .post-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .post {
+        min-height: 300px;
+    }
+
+    /* Убираем смещение у постов */
+    .post:nth-child(2),
+    .post:nth-child(3) {
+        transform: none;
+    }
+
+    /* Шаги — 2 колонки */
+    .steps {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 20px;
+    }
+
+    .steps::before {
+        display: none;
+    }
+
+    .step-dot {
+        width: 58px;
+        height: 58px;
+        font-size: 1.3rem;
+    }
+
+    .step p {
+        max-width: 100%;
+    }
+
+    .step {
+        padding: 0;
+    }
+
+    /* Theory кольцо */
+    .theory-ring {
+        width: 80vw;
+    }
+
+    /* Ticker */
+    .ticker {
+        transform: none;
+        scale: 1;
+    }
+
+    /* Discord фейк */
+    .fake-discord {
+        padding: 20px;
+    }
+
+    /* Hero отступы */
+    .hero {
+        padding-top: 110px;
+        padding-bottom: 60px;
+    }
+}
+
+/* ===== МОБИЛЬНЫЕ ТЕЛЕФОНЫ (до 600px) ===== */
+@media (max-width: 600px) {
+    /* Навигация */
+    .nav-status {
+        display: none;
+    }
+
+    .nav {
+        padding: 16px clamp(16px, 4vw, 24px);
+    }
+
+    .nav-logo {
+        font-size: 1rem;
+    }
+
+    /* Hero */
+    .hero {
+        padding-top: 90px;
+        padding-bottom: 40px;
+        min-height: 90svh;
+    }
+
+    .hero-title {
+        font-size: 22vw;
+        line-height: 0.85;
+    }
+
+    .hero-kicker {
+        font-size: 0.6rem;
+        padding: 6px 12px;
+        margin-bottom: 20px;
+    }
+
+    .hero-copy {
+        font-size: 0.95rem;
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+
+    .hero-scroll {
+        bottom: 16px;
+    }
+
+    .hero-scroll .bar {
+        height: 30px;
+    }
+
+    /* Заголовки секций */
+    .section-heading {
+        font-size: 13vw;
+        line-height: 0.9;
+    }
+
+    .posts-head h2 {
+        font-size: 13vw;
+        line-height: 0.9;
+    }
+
+    .theory-core h2 {
+        font-size: 14vw;
+        line-height: 0.85;
+    }
+
+    .discord h2 {
+        font-size: 14vw;
+        line-height: 0.85;
+    }
+
+    .roadmap-head h2 {
+        font-size: 14vw;
+        line-height: 0.85;
+    }
+
+    .final h2 {
+        font-size: 18vw;
+        line-height: 0.82;
+    }
+
+    /* Posts head */
+    .posts-head {
+        display: block;
+    }
+
+    .posts-head p {
+        margin-top: 16px;
+        max-width: 100%;
+        font-size: 0.85rem;
+    }
+
+    .posts-head h2 {
+        font-size: 14vw;
+    }
+
+    /* Посты */
+    .post {
+        min-height: 260px;
+        padding: 18px;
+    }
+
+    .post h3 {
+        font-size: 1.8rem;
+    }
+
+    .post p {
+        font-size: 0.75rem;
+    }
+
+    /* Steps — 1 колонка */
+    .steps {
+        grid-template-columns: 1fr;
+        gap: 30px 0;
+    }
+
+    .step-dot {
+        width: 50px;
+        height: 50px;
+        font-size: 1.1rem;
+        margin-bottom: 16px;
+    }
+
+    .step h3 {
+        font-size: 1.3rem;
+    }
+
+    .step p {
+        font-size: 0.75rem;
+        max-width: 280px;
+        margin: 8px auto 0;
+    }
+
+    /* Theory */
+    .theory {
+        min-height: 70vh;
+        padding: 40px 0;
+    }
+
+    .theory-core p {
+        font-size: 0.9rem;
+        padding: 0 16px;
+    }
+
+    .theory-ring {
+        width: 85vw;
+    }
+
+    .pulse-line {
+        width: 70vw;
+    }
+
+    /* Discord */
+    .discord {
+        min-height: auto;
+        padding: 40px 0;
+    }
+
+    .discord-grid {
+        gap: 30px;
+    }
+
+    .fake-discord {
+        padding: 16px;
+    }
+
+    .server-list span {
+        font-size: 0.7rem;
+    }
+
+    .server-head {
+        padding-bottom: 12px;
+    }
+
+    .server-dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    /* Секции — отступы */
+    .diag-section {
+        padding: 60px 0;
+    }
+
+    .posts {
+        padding: 60px 0;
+    }
+
+    .roadmap {
+        padding: 60px 0;
+    }
+
+    .roadmap-head {
+        margin-bottom: 40px;
+    }
+
+    .roadmap-head p {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+
+    /* Финал */
+    .final {
+        min-height: 70vh;
+        padding: 60px 16px;
+    }
+
+    .final p {
+        font-size: 0.95rem;
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+
+    /* Кнопки */
+    .final-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn {
+        min-width: 200px;
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+        gap: 20px;
+        padding: 14px 18px;
+        font-size: 0.7rem;
+    }
+
+    /* Секция label */
+    .section-label {
+        font-size: 0.6rem;
+        margin-bottom: 12px;
+    }
+
+    /* Сигнал карточки */
+    .signal-card {
+        padding: 18px;
+    }
+
+    .signal-card b {
+        font-size: 1.3rem;
+    }
+
+    .signal-card p {
+        font-size: 0.8rem;
+    }
+
+    /* Сравнение слайдер */
+    .compare-slider {
+        min-height: 200px;
+    }
+
+    .compare-layer {
+        padding: 16px;
+    }
+
+    .compare-layer b {
+        font-size: 1.2rem;
+    }
+
+    .compare-layer p {
+        font-size: 0.75rem;
+    }
+
+    .compare-handle::before {
+        width: 30px;
+        height: 30px;
+        font-size: 0.7rem;
+    }
+
+    /* Футер */
+    .footer {
+        padding: 25px 0 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+        font-size: 0.6rem;
+    }
+
+    .footer-track span {
+        font-size: 3rem;
+        padding: 0 20px;
+    }
+
+    /* Прелоадер */
+    .preloader .count {
+        font-size: 3.5rem;
+    }
+
+    .preloader .label {
+        font-size: 0.6rem;
+    }
+
+    /* Ticker */
+    .ticker {
+        padding: 10px 0;
+    }
+
+    .ticker span {
+        font-size: 1rem;
+        padding: 0 14px;
+    }
+}
+
+/* ===== ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ (до 380px) ===== */
+@media (max-width: 380px) {
+    .hero-title {
+        font-size: 20vw;
+    }
+
+    .section-heading {
+        font-size: 11vw;
+    }
+
+    .posts-head h2 {
+        font-size: 12vw;
+    }
+
+    .final h2 {
+        font-size: 16vw;
+    }
+
+    .post {
+        min-height: 220px;
+        padding: 14px;
+    }
+
+    .post h3 {
+        font-size: 1.4rem;
+    }
+
+    .btn {
+        min-width: 160px;
+        font-size: 0.65rem;
+        padding: 12px 14px;
+    }
+
+    .step-dot {
+        width: 44px;
+        height: 44px;
+        font-size: 1rem;
+    }
+
+    .step h3 {
+        font-size: 1.1rem;
+    }
+
+    .signal-card {
+        padding: 14px;
+    }
+
+    .signal-card b {
+        font-size: 1.1rem;
+    }
+
+    .fake-discord {
+        padding: 12px;
+    }
+
+    .server-list span {
+        font-size: 0.65rem;
+    }
+}
+
+/* ===== ПРЕДПОЧТЕНИЕ: БЕЗ АНИМАЦИЙ ===== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}

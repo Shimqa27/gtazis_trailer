@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Ekran';
-    src: url('/gtazis_trailer/assets/fonts/ekran_bold.ttf') format('truetype');
+    src: url('../assets/fonts/ekran_bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -680,19 +680,19 @@ button {
     margin: 10px 0 0;
 }
 .post:nth-child(1) .visual {
-    background-image: url("/gtazis_trailer/assets/images/post1.png");
+    background-image: url("../assets/images/post1.png");
     background-size: cover;
     background-position: center;
 }
 
 .post:nth-child(2) .visual {
-    background-image: url("/gtazis_trailer/assets/images/post2.png");
+    background-image: url("../assets/images/post2.png");
     background-size: cover;
     background-position: center;
 }
 
 .post:nth-child(3) .visual {
-    background-image: url("/gtazis_trailer/assets/images/post3.png");
+    background-image: url("../assets/images/post3.png");
     background-size: cover;
     background-position: center;
 }
@@ -880,14 +880,14 @@ button {
 }
 
 .compare-after {
-    background-image: url("/gtazis_trailer/assets/images/back1.png");
+    background-image: url("../assets/images/back1.png");
     background-size: cover;
     background-position: center;
     z-index: 2;
 }
 
 .compare-before {
-    background-image: url("/gtazis_trailer/assets/images/back8.png");
+    background-image: url("../assets/images/back8.png");
     background-size: cover;
     background-position: center;
     z-index: 3;

@@ -1,7 +1,7 @@
 (function loadSectionBackgrounds(){
     document.querySelectorAll('[data-bg]').forEach((section) => {
         const n = section.getAttribute('data-bg');
-        section.style.setProperty('--section-bg', `url("../assets/images/back${n}.PNG")`);
+        section.style.setProperty('--section-bg', `url("../assets/images/back${n}.png")`);
     });
 })();
 
